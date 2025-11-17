@@ -1,0 +1,356 @@
+{
+  "$schema": "https://zed.dev/schema/themes/v0.2.0.json",
+  "name": "merrynuts",
+  "author": "merrynuts",
+  "themes": [
+    {
+      "name": "MerryNuts Dark",
+      "appearance": "dark",
+      "style": {
+        // Basic UI color scheme
+        "border": "#75715eff",
+        "border.variant": "#1e1e1eff",
+        "border.focused": "#66d9efff",
+        "border.selected": "#3a3a3aff",
+        "border.transparent": "#00000000",
+        "border.disabled": "#414754ff",
+        "elevated_surface.background": "#1e1e1eff",
+        "surface.background": "#1e1e1eff",
+        "background": "#151515ff",
+        "element.background": "#1e1e1eff",
+        "element.hover": "#2d2d2dff",
+        "element.active": "#3a3a3aff",
+        "element.selected": "#3a3a3aff",
+        "element.disabled": "#1e1e1eff",
+        "drop_target.background": "#83899480",
+        "ghost_element.background": "#00000000",
+        "ghost_element.hover": "#2d2d2dff",
+        "ghost_element.active": "#3a3a3aff",
+        "ghost_element.selected": "#3a3a3aff",
+        "ghost_element.disabled": "#1e1e1eff",
+        
+        // Text/icon color scheme
+        "text": "#f8f8f2ff",
+        "text.muted": "#75715eff",
+        "text.placeholder": "#75715eff",
+        "text.disabled": "#75715eff",
+        "text.accent": "#66d9efff",
+        "icon": "#f8f8f2ff",
+        "icon.muted": "#75715eff",
+        "icon.disabled": "#75715eff",
+        "icon.placeholder": "#75715eff",
+        "icon.accent": "#66d9efff",
+        
+        // Top bar/status bar/tab bar
+        "status_bar.background": "#2d2d2dff",
+        "title_bar.background": "#2d2d2dff",
+        "title_bar.inactive_background": "#1e1e1eff",
+        "toolbar.background": "#1e1e1eff",
+        "tab_bar.background": "#2d2d2dff",
+        "tab.inactive_background": "#2d2d2dff",
+        "tab.active_background": "#151515ff",
+        
+        // Search-related
+        "search.match_background": "#fd971f66",
+        "search.highlight_background": "#fd971f66",
+        
+        // Panels/panes
+        "panel.background": "#1e1e1eff",
+        "panel.focused_border": "#66d9efff",
+        "pane.focused_border": "#66d9efff",
+        
+        // Scrollbar
+        "scrollbar.thumb.background": "#75715e4c",
+        "scrollbar.thumb.hover_background": "#75715eff",
+        "scrollbar.thumb.border": "#1e1e1eff",
+        "scrollbar.track.background": "#00000000",
+        "scrollbar.track.border": "#1e1e1eff",
+        
+        // Editor core (Key: Distinct backgrounds for line number area and editing area)
+        "editor.foreground": "#f8f8f2ff",
+        "editor.background": "#151515ff",  // Editing area background (Vim: s:bg_edit)
+        "editor.gutter.background": "#1e1e1eff",  // Line number area background (Vim: s:bg_num, different from editing area)
+        "editor.subheader.background": "#1e1e1eff",
+        "editor.active_line.background": "#1e1e1ebf",  // Current line background (matches line number area)
+        "editor.highlighted_line.background": "#1e1e1eff",
+        "editor.line_number": "#75715eff",  // Line number color (Vim: s:gray)
+        "editor.active_line_number": "#f8f8f2ff",  // Active line number color (Vim: s:fg)
+        "editor.hover_line_number": "#a1efe4ff",
+        "editor.invisible": "#75715eff",
+        "editor.wrap_guide": "#75715e0d",
+        "editor.active_wrap_guide": "#75715e1a",
+        "editor.document_highlight.read_background": "#66d9ef1a",
+        "editor.document_highlight.write_background": "#3a3a3a66",
+        
+        // Terminal color scheme (compatible with Vim terminal mode)
+        "terminal.background": "#151515ff",
+        "terminal.foreground": "#f8f8f2ff",
+        "terminal.bright_foreground": "#f8f8f2ff",
+        "terminal.dim_foreground": "#151515ff",
+        "terminal.ansi.black": "#151515ff",
+        "terminal.ansi.bright_black": "#1e1e1eff",
+        "terminal.ansi.dim_black": "#f8f8f2ff",
+        "terminal.ansi.red": "#f92672ff",
+        "terminal.ansi.bright_red": "#f92672ff",
+        "terminal.ansi.dim_red": "#f92672ff",
+        "terminal.ansi.green": "#a6e22eff",
+        "terminal.ansi.bright_green": "#a6e22eff",
+        "terminal.ansi.dim_green": "#a6e22eff",
+        "terminal.ansi.yellow": "#fd971fff",
+        "terminal.ansi.bright_yellow": "#fd971fff",
+        "terminal.ansi.dim_yellow": "#fd971fff",
+        "terminal.ansi.blue": "#66d9efff",
+        "terminal.ansi.bright_blue": "#66d9efff",
+        "terminal.ansi.dim_blue": "#66d9efff",
+        "terminal.ansi.magenta": "#ae81ffff",
+        "terminal.ansi.bright_magenta": "#ae81ffff",
+        "terminal.ansi.dim_magenta": "#ae81ffff",
+        "terminal.ansi.cyan": "#a1efe4ff",
+        "terminal.ansi.bright_cyan": "#a1efe4ff",
+        "terminal.ansi.dim_cyan": "#a1efe4ff",
+        "terminal.ansi.white": "#f8f8f2ff",
+        "terminal.ansi.bright_white": "#f8f8f2ff",
+        "terminal.ansi.dim_white": "#f8f8f2ff",
+        
+        // Link text
+        "link_text.hover": "#66d9efff",
+        
+        // Version control related
+        "version_control.added": "#a6e22eff",
+        "version_control.modified": "#fd971fff",
+        "version_control.deleted": "#f92672ff",
+        "version_control.conflict_marker.ours": "#a6e22e1a",
+        "version_control.conflict_marker.theirs": "#66d9ef1a",
+        
+        // Status indicator colors (error/warning/info etc.)
+        "conflict": "#fd971fff",
+        "conflict.background": "#fd971f1a",
+        "conflict.border": "#fd971fff",
+        "created": "#a6e22eff",
+        "created.background": "#a6e22e1a",
+        "created.border": "#a6e22eff",
+        "deleted": "#f92672ff",
+        "deleted.background": "#f926721a",
+        "deleted.border": "#f92672ff",
+        "error": "#f92672ff",
+        "error.background": "#f926721a",
+        "error.border": "#f92672ff",
+        "hidden": "#75715eff",
+        "hidden.background": "#75715e1a",
+        "hidden.border": "#75715eff",
+        "hint": "#a1efe4ff",
+        "hint.background": "#a1efe41a",
+        "hint.border": "#a1efe4ff",
+        "ignored": "#75715eff",
+        "ignored.background": "#75715e1a",
+        "ignored.border": "#75715eff",
+        "info": "#66d9efff",
+        "info.background": "#66d9ef1a",
+        "info.border": "#66d9efff",
+        "modified": "#fd971fff",
+        "modified.background": "#fd971f1a",
+        "modified.border": "#fd971fff",
+        "predictive": "#ae81ffff",
+        "predictive.background": "#ae81ff1a",
+        "predictive.border": "#ae81ffff",
+        "renamed": "#66d9efff",
+        "renamed.background": "#66d9ef1a",
+        "renamed.border": "#66d9efff",
+        "success": "#a6e22eff",
+        "success.background": "#a6e22e1a",
+        "success.border": "#a6e22eff",
+        "unreachable": "#75715eff",
+        "unreachable.background": "#75715e1a",
+        "unreachable.border": "#75715eff",
+        "warning": "#fd971fff",
+        "warning.background": "#fd971f1a",
+        "warning.border": "#fd971fff",
+        
+        // Multi-user collaboration cursors
+        "players": [
+          {
+            "cursor": "#66d9efff",
+            "background": "#66d9efff",
+            "selection": "#66d9ef3d"
+          },
+          {
+            "cursor": "#f92672ff",
+            "background": "#f92672ff",
+            "selection": "#f926723d"
+          },
+          {
+            "cursor": "#fd971fff",
+            "background": "#fd971fff",
+            "selection": "#fd971f3d"
+          },
+          {
+            "cursor": "#ae81ffff",
+            "background": "#ae81ffff",
+            "selection": "#ae81ff3d"
+          },
+          {
+            "cursor": "#a1efe4ff",
+            "background": "#a1efe4ff",
+            "selection": "#a1efe43d"
+          },
+          {
+            "cursor": "#a6e22eff",
+            "background": "#a6e22eff",
+            "selection": "#a6e22e3d"
+          }
+        ],
+        
+        // Syntax highlighting (fully aligned with Vim syntax groups)
+        "syntax": {
+          "attribute": {
+            "color": "#fd971fff",
+            "font_style": null,
+            "font_weight": null
+          },
+          "boolean": {
+            "color": "#ae81ffff",
+            "font_style": null,
+            "font_weight": null
+          },
+          "comment": {
+            "color": "#75715eff",  // Vim: s:comment
+            "font_style": null,
+            "font_weight": null
+          },
+          "comment.doc": {
+            "color": "#75715eff",
+            "font_style": null,
+            "font_weight": null
+          },
+          "constant": {
+            "color": "#ae81ffff",  // Vim: s:purple
+            "font_style": null,
+            "font_weight": null
+          },
+          "constructor": {
+            "color": "#66d9efff",  // Vim: s:blue
+            "font_style": null,
+            "font_weight": null
+          },
+          "embedded": {
+            "color": "#f8f8f2ff",
+            "font_style": null,
+            "font_weight": null
+          },
+          "emphasis": {
+            "color": "#fd971fff",
+            "font_style": null,
+            "font_weight": null
+          },
+          "emphasis.strong": {
+            "color": "#fd971fff",  // Vim: markdownBold
+            "font_style": null,
+            "font_weight": 700
+          },
+          "enum": {
+            "color": "#f92672ff",  // Vim: s:red
+            "font_style": null,
+            "font_weight": null
+          },
+          "function": {
+            "color": "#66d9efff",  // Vim: s:blue
+            "font_style": null,
+            "font_weight": 700
+          },
+          "hint": {
+            "color": "#a1efe4ff",  // Vim: s:cyan
+            "font_style": null,
+            "font_weight": null
+          },
+          "keyword": {
+            "color": "#f92672ff",  // Vim: s:red
+            "font_style": null,
+            "font_weight": null
+          },
+          "label": {
+            "color": "#f92672ff",  // Vim: s:red
+            "font_style": null,
+            "font_weight": null
+          },
+          "link_text": {
+            "color": "#66d9efff",
+            "font_style": "italic",
+            "font_weight": null
+          },
+          "link_uri": {
+            "color": "#a1efe4ff",
+            "font_style": null,
+            "font_weight": null
+          },
+          "namespace": {
+            "color": "#f8f8f2ff",
+            "font_style": null,
+            "font_weight": null
+          },
+          "number": {
+            "color": "#ae81ffff",  // Vim: s:purple
+            "font_style": null,
+            "font_weight": null
+          },
+          "operator": {
+            "color": "#f92672ff",  // Vim: s:red
+            "font_style": null,
+            "font_weight": null
+          },
+          "predictive": {
+            "color": "#ae81ffff",
+            "font_style": "italic",
+            "font_weight": null
+          },
+          "preproc": {
+            "color": "#fd971fff",  // Vim: s:yellow
+            "font_style": null,
+            "font_weight": null
+          },
+          "primary": {
+            "color": "#f8f8f2ff",
+            "font_style": null,
+            "font_weight": null
+          },
+          "property": {
+            "color": "#fd971fff",  // Vim: s:yellow
+            "font_style": null,
+            "font_weight": null
+          },
+          "punctuation": {
+            "color": "#f8f8f2ff",  // Vim: s:fg
+            "font_style": null,
+            "font_weight": null
+          },
+          "punctuation.bracket": {
+            "color": "#f8f8f2ff",
+            "font_style": null,
+            "font_weight": null
+          },
+          "punctuation.delimiter": {
+            "color": "#f8f8f2ff",
+            "font_style": null,
+            "font_weight": null
+          },
+          "punctuation.list_marker": {
+            "color": "#f92672ff",
+            "font_style": null,
+            "font_weight": null
+          },
+          "punctuation.markup": {
+            "color": "#f92672ff",  // Vim: markdownH1
+            "font_style": null,
+            "font_weight": null
+          },
+          "punctuation.special": {
+            "color": "#fd971fff",
+            "font_style": null,
+            "font_weight": null
+          },
+          "selector": {
+            "color": "#a6e22eff",  // Vim: cssClassName
+            "font_style": null,
+            "font_weight": null
+          },
+          "selector.pseudo": {
+            "color": "#66d9efff",
