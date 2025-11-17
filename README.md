@@ -19,11 +19,11 @@ Open the corresponding directory based on your system (manually create the `cust
 3. If the Library folder is not visible, first press `Command + Shift + .` to show hidden files;
 
 ### Linux:
-1. Open Terminal, enter `mkdir -p ~/.config/ZEditor/custom-themes` (to create the directory);
-2. Enter `cd ~/.config/ZEditor/custom-themes` to navigate to the directory, or access it via the file manager.
+1. Open Terminal, enter `mkdir -p ~/.config/zed/themes` (to create the directory);
+2. Enter `cd ~/.config/zed/themes` to navigate to the directory, or access it via the file manager.
 
 ## Step 3: Place the Theme File
-Copy the `merrynuts.ztheme` file from your Desktop to the `custom-themes` folder mentioned above (ensure no file extension errors, e.g., `merrynuts.ztheme.txt`).
+Copy the `merrynuts.ztheme` file from your Desktop to the `themes` folder mentioned above (ensure no file extension errors, e.g., `merrynuts.ztheme.txt`).
 
 ## Step 4: Activate the Theme in ZEditor
 1. Restart ZEditor (Critical: A restart is mandatory after manual file placement to load the new theme);
